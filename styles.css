@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4fdf7;
+  color: #1a2a1a;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1f7a5b, #7ccba1);
+  color: white;
+  padding: 1rem 5vw 4rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.topbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.eyebrow {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  margin: 0.5rem 0;
+}
+
+.subtitle {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+button {
+  background: #fff;
+  color: #1f7a5b;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.circle-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.goal-meter {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  height: 16px;
+  overflow: hidden;
+  margin: 1rem 0 0.5rem;
+}
+
+#goalFill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #c8ff94;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 5vw;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.cards article {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.impact-box {
+  background: #eafaf1;
+  border-radius: 18px;
+}
+
+.tracker-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .hero-content,
+  .cards,
+  .tracker-row {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
